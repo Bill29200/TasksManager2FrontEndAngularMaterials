@@ -3,21 +3,21 @@
     <mat-icon>card_travel</mat-icon>
   </button>
   <span style="flex:auto"></span>
-  <button mat-button> Home</button>
-  <button mat-button> Profile</button>
+  <button mat-button routerLink="/home"> Home</button>
+  <button mat-button routerLink="/profile"> Profile</button>
   <button mat-button [matMenuTriggerFor]="importMenu">
     <mat-icon iconPositionEnd>keyboard_arrow_down</mat-icon>
     Managements
   </button>
   <mat-menu #importMenu>
-    <button mat-menu-item> Employees</button>
-    <button mat-menu-item> Missions</button>
-    <button mat-menu-item> Projects</button>
-    <button mat-menu-item> Hardware</button>
+    <button mat-menu-item routerLink="/employee"> Employees</button>
+    <button mat-menu-item routerLink="/mission"> Missions</button>
+    <button mat-menu-item routerLink="/project"> Projects</button>
+    <button mat-menu-item routerLink="/hardware"> Hardware</button>
   </mat-menu>
 
 
-  <button mat-raised-button color="accent"> LogOut</button>
+  <button mat-raised-button color="accent" routerLink="/login"> Logout</button>
 
 
 </mat-toolbar>
@@ -27,23 +27,23 @@
       <mat-list>
         <mat-list-item>
           <mat-icon>dashboard</mat-icon>
-          <button mat-button> Dashboard </button>
+          <button mat-button routerLink="/dashboard"> Dashboard </button>
         </mat-list-item>
         <mat-list-item>
           <mat-icon>accessibility</mat-icon>
-          <button mat-button> Employees </button>
+          <button mat-button routerLink="/employee"> Employees </button>
         </mat-list-item>
         <mat-list-item>
           <mat-icon>assignment</mat-icon>
-          <button mat-button> Missions </button>
+          <button mat-button routerLink="/mission"> Missions </button>
         </mat-list-item>
         <mat-list-item>
           <mat-icon>business</mat-icon>
-          <button mat-button> Projects </button>
+          <button mat-button routerLink="/project"> Projects </button>
         </mat-list-item>
         <mat-list-item>
           <mat-icon>computer</mat-icon>
-          <button mat-button> Hardware </button>
+          <button mat-button routerLink="/hardware"> Hardware </button>
         </mat-list-item>
 
       </mat-list>
