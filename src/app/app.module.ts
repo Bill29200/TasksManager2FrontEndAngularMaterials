@@ -12,6 +12,9 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 import {MatCardModule} from '@angular/material/card';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+
 import { EmployeeComponent } from './components/employee/employee.component';
 import { HardwareComponent } from './components/hardware/hardware.component';
 import { MissionComponent } from './components/mission/mission.component';
@@ -20,6 +23,7 @@ import { HomeComponent } from './components/home/home.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { AboutComponent } from './components/about/about.component';
 import { LoginComponent } from './components/login/login.component';
+
 // import { DashboardComponent } from './components/dashboard/dashboard.component';
 @NgModule({
   declarations: [
@@ -44,7 +48,10 @@ import { LoginComponent } from './components/login/login.component';
     MatMenuModule,
     MatListModule,
     MatSidenavModule,
-    MatCardModule
+    MatCardModule,
+    MatFormFieldModule,
+    MatInputModule,
+
   ],
   providers: [
     provideAnimationsAsync()
