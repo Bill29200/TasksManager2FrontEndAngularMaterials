@@ -1,5 +1,5 @@
 <mat-toolbar color="primary">
-  <button mat-icon-button>
+  <button mat-icon-button (click)="myDrawer.toggle()">
     <mat-icon>card_travel</mat-icon>
   </button>
   <span style="flex:auto"></span>
@@ -23,7 +23,7 @@
 </mat-toolbar>
 
   <mat-drawer-container class="example-container" >
-    <mat-drawer opened="true" mode="side" position="start">
+    <mat-drawer #myDrawer opened="true" mode="side" position="start">
       <mat-list>
         <mat-list-item>
           <mat-icon>dashboard</mat-icon>
