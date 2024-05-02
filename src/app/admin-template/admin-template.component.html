@@ -1,11 +1,52 @@
 <mat-toolbar color="primary">
+  <button mat-icon-button>
+    <mat-icon>card_travel</mat-icon>
+  </button>
   <span style="flex:auto"></span>
   <button mat-button> Home</button>
   <button mat-button> Profile</button>
-  <button mat-button> Import</button>
+  <button mat-button [matMenuTriggerFor]="importMenu">
+    <mat-icon iconPositionEnd>keyboard_arrow_down</mat-icon>
+    Managements
+  </button>
+  <mat-menu #importMenu>
+    <button mat-menu-item> Employees</button>
+    <button mat-menu-item> Missions</button>
+    <button mat-menu-item> Projects</button>
+    <button mat-menu-item> Hardware</button>
+  </mat-menu>
+
+
   <button mat-raised-button color="accent"> LogOut</button>
 
 
 </mat-toolbar>
+
+  <mat-drawer-container class="example-container" >
+    <mat-drawer opened="true" mode="side" position="start">
+      <mat-list>
+        <mat-list-item>
+          <button mat-button> Employees </button>
+        </mat-list-item>
+        <mat-list-item>
+          <button mat-button> Missions </button>
+        </mat-list-item>
+        <mat-list-item>
+          <button mat-button> Projects </button>
+        </mat-list-item>
+        <mat-list-item>
+          <button mat-button> Hardware </button>
+        </mat-list-item>
+
+      </mat-list>
+    </mat-drawer>
+    <mat-drawer-content>
+      <div style="min-height : 600px">
+
+      </div>
+    </mat-drawer-content>
+
+  </mat-drawer-container>
+
 
 
