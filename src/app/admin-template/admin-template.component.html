@@ -26,15 +26,23 @@
     <mat-drawer opened="true" mode="side" position="start">
       <mat-list>
         <mat-list-item>
+          <mat-icon>dashboard</mat-icon>
+          <button mat-button> Dashboard </button>
+        </mat-list-item>
+        <mat-list-item>
+          <mat-icon>accessibility</mat-icon>
           <button mat-button> Employees </button>
         </mat-list-item>
         <mat-list-item>
+          <mat-icon>assignment_ind</mat-icon>
           <button mat-button> Missions </button>
         </mat-list-item>
         <mat-list-item>
+          <mat-icon>assignment</mat-icon>
           <button mat-button> Projects </button>
         </mat-list-item>
         <mat-list-item>
+          <mat-icon>computer</mat-icon>
           <button mat-button> Hardware </button>
         </mat-list-item>
 
@@ -42,7 +50,7 @@
     </mat-drawer>
     <mat-drawer-content>
       <div style="min-height : 600px">
-
+        <router-outlet></router-outlet>
       </div>
     </mat-drawer-content>
 
