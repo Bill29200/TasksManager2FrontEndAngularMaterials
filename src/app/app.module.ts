@@ -11,6 +11,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
+import {MatCardModule} from '@angular/material/card';
 import { EmployeeComponent } from './components/employee/employee.component';
 import { HardwareComponent } from './components/hardware/hardware.component';
 import { MissionComponent } from './components/mission/mission.component';
@@ -42,7 +43,8 @@ import { LoginComponent } from './components/login/login.component';
     MatIconModule,
     MatMenuModule,
     MatListModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatCardModule
   ],
   providers: [
     provideAnimationsAsync()

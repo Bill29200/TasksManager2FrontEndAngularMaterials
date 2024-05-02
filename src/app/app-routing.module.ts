@@ -8,6 +8,7 @@ import {EmployeeComponent} from "./components/employee/employee.component";
 import {MissionComponent} from "./components/mission/mission.component";
 import {ProjectComponent} from "./components/project/project.component";
 import {HardwareComponent} from "./components/hardware/hardware.component";
+import {AboutComponent} from "./components/about/about.component";
 
 const routes: Routes = [
       {path:"home", component: HomeComponent},
@@ -18,6 +19,7 @@ const routes: Routes = [
       {path:"mission", component: MissionComponent},
       {path:"project", component: ProjectComponent},
       {path:"hardware", component: HardwareComponent},
+      {path:"about", component: AboutComponent},
       {path:"**", component: LoginComponent},
 
 
