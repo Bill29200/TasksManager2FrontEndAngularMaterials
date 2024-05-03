@@ -14,6 +14,7 @@ import {MatListModule} from '@angular/material/list';
 import {MatCardModule} from '@angular/material/card';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
+import {MatTableModule} from '@angular/material/table';
 
 import { EmployeeComponent } from './components/employee/employee.component';
 import { HardwareComponent } from './components/hardware/hardware.component';
@@ -58,6 +59,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     MatInputModule,
     ReactiveFormsModule,
     HttpClientModule,
+    MatTableModule,
 
   ],
   providers: [

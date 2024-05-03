@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { MatTableDataSource } from '@angular/material/table';
 
 @Component({
   selector: 'app-employee',
@@ -9,6 +10,10 @@ import { Component, OnInit } from '@angular/core';
 export class EmployeeComponent implements OnInit{
 
   public employees : any;
+  public dataSource : any;
+
+  public displayedColumns = ['employeeId', 'name', 'email', 'position','birthDate'];
+ 
   //--------------------------------------------------------
 
   constructor(private http : HttpClient){} 
@@ -22,7 +27,9 @@ export class EmployeeComponent implements OnInit{
         next:(data: Object)=>
           {
           this.employees = data;
-          console.log(data);
+           console.log(data);
+          this.dataSource = new MatTableDataSource(this.employees);
+         
           },
          error: (err: any) =>
           {
