@@ -10,18 +10,32 @@ import {ProjectComponent} from "./components/project/project.component";
 import {HardwareComponent} from "./components/hardware/hardware.component";
 import {AboutComponent} from "./components/about/about.component";
 import { AdminTemplateComponent } from './admin-template/admin-template.component';
+import { AuthGuard } from './guards/auth.guard';
+import { AuthorizationGuard } from './guards/authorization.guard';
+
+
 
 const routes: Routes = [
       {path:"", component: LoginComponent},
       {path:"login", component: LoginComponent},
-      {path:"admin", component: AdminTemplateComponent, children :[
+      {path:"admin", component: AdminTemplateComponent, 
+         canActivate : [AuthGuard],
+         children :[
             {path:"home", component: HomeComponent},      
             {path:"profile", component: ProfileComponent},      
             {path:"dashboard", component: DashboardComponent},
-            {path:"employee", component: EmployeeComponent},
-            {path:"mission", component: MissionComponent},
-            {path:"project", component: ProjectComponent},
-            {path:"hardware", component: HardwareComponent},
+            {path:"employee", component: EmployeeComponent,
+               canActivate : [AuthorizationGuard], data : {roles:['ADMIN']}
+            },
+            {path:"mission", component: MissionComponent,
+              canActivate : [AuthorizationGuard], data : {roles:['ADMIN']}
+            },
+            {path:"project", component: ProjectComponent,
+              canActivate : [AuthorizationGuard], data : {roles:['ADMIN']}
+            },
+            {path:"hardware", component: HardwareComponent,
+              canActivate : [AuthorizationGuard], data : {roles:['ADMIN']}
+            },
             {path:"about", component: AboutComponent},
             {path:"**", component: LoginComponent}
 

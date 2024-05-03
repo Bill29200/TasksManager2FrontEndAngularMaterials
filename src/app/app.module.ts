@@ -24,8 +24,11 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { AboutComponent } from './components/about/about.component';
 import { LoginComponent } from './components/login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AuthGuard } from './guards/auth.guard';
+import { AuthorizationGuard } from './guards/authorization.guard';
 
-// import { DashboardComponent } from './components/dashboard/dashboard.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,7 +41,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     ProfileComponent,
     AboutComponent,
     LoginComponent,
-//     DashboardComponent
+
   ],
   imports: [
     BrowserModule,
@@ -57,7 +60,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 
   ],
   providers: [
-    provideAnimationsAsync()
+    provideAnimationsAsync(), AuthGuard,AuthorizationGuard
+
   ],
   bootstrap: [AppComponent]
 })
