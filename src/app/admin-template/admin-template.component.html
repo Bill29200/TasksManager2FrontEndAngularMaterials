@@ -5,7 +5,7 @@
   <span style="flex:auto"></span>
   <button mat-button routerLink="/admin/home"> Home</button>
   <button mat-button routerLink="/admin/profile"> Profile</button>
-  <button mat-button [matMenuTriggerFor]="importMenu">
+  <button mat-button [matMenuTriggerFor]="importMenu" *ngIf="authService.roles.includes('ADMIN')">
     <mat-icon iconPositionEnd>keyboard_arrow_down</mat-icon>
     Managements
   </button>
@@ -25,7 +25,7 @@
 
   <mat-drawer-container class="example-container" >
     <mat-drawer #myDrawer opened="true" mode="side" position="start">
-      <mat-list>
+      <mat-list *ngIf="authService.roles.includes('ADMIN')">
         <mat-list-item>
           <mat-icon>dashboard</mat-icon>
           <button mat-button routerLink="/admin/dashboard"> Dashboard </button>
@@ -44,7 +44,7 @@
         </mat-list-item>
         <mat-list-item>
           <mat-icon>computer</mat-icon>
-          <button mat-button routerLink="/admin/hardware"> Hardware </button>
+          <button mat-button routerLink="/admin/hardware" > Hardware </button>
         </mat-list-item>
 
       </mat-list>
