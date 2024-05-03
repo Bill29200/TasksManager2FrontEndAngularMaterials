@@ -23,7 +23,10 @@ login() {
 
      this.router.navigateByUrl("/admin");
    }
-   else {}
+   else {
+    
+    this.router.navigateByUrl("/login");
+   }
 }
 //-------------------------------------------- 
 
