@@ -1,23 +1,25 @@
 <div class="container">
-  <mat-card class="login-form">
+  {{loginForm.value |json}}
+  <mat-card class="login-form" [formGroup]="loginForm">
     <mat-card-header>
-      <mat-card-title>Authentication</mat-card-title>
+      <mat-icon matSuffix>vpn_key</mat-icon>
+      <mat-card-title>Authentication</mat-card-title>      
     </mat-card-header>
     <mat-divider></mat-divider>
     <mat-card-content>
       <mat-form-field appearance="fill">
         <mat-label>Username </mat-label>
-        <input matInput >
+        <input matInput formControlName="username">
         <mat-icon matSuffix>supervisor_account</mat-icon>
       </mat-form-field>
       <mat-form-field appearance="fill">
         <mat-label>Password </mat-label>
-        <input matInput type="password" >
+        <input matInput type="password" formControlName="password">
         <mat-icon matSuffix>vpn_key</mat-icon>
       </mat-form-field>
     </mat-card-content>
     <mat-card-actions align="end">
-      <button  mat-raised-button color="primary">Login</button>
+      <button  mat-raised-button color="primary" (click)="login()">Login</button>
     </mat-card-actions>
   </mat-card>
 </div>

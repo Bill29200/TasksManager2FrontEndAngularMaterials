@@ -9,18 +9,22 @@ import {MissionComponent} from "./components/mission/mission.component";
 import {ProjectComponent} from "./components/project/project.component";
 import {HardwareComponent} from "./components/hardware/hardware.component";
 import {AboutComponent} from "./components/about/about.component";
+import { AdminTemplateComponent } from './admin-template/admin-template.component';
 
 const routes: Routes = [
-      {path:"home", component: HomeComponent},
-      {path:"profile", component: ProfileComponent},
+      {path:"", component: LoginComponent},
       {path:"login", component: LoginComponent},
+      {path:"admin", component: AdminTemplateComponent},
+      {path:"home", component: HomeComponent},      
+      {path:"profile", component: ProfileComponent},      
       {path:"dashboard", component: DashboardComponent},
       {path:"employee", component: EmployeeComponent},
       {path:"mission", component: MissionComponent},
       {path:"project", component: ProjectComponent},
       {path:"hardware", component: HardwareComponent},
       {path:"about", component: AboutComponent},
-      {path:"**", component: LoginComponent},
+      {path:"**", component: LoginComponent}
+      
 
 
 ];
